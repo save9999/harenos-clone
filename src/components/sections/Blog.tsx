@@ -6,42 +6,42 @@ const POSTS = [
   {
     title: "Tout savoir sur la rénovation d'un salon",
     image:
-      "https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=900&q=80",
+      "https://cdn.prod.website-files.com/66b5915d0cf82dc2bc8a5f3b/670d97c70334f3320bd08dbc_renovation-salon.webp",
   },
   {
     title: "Quels sont les avantages de rénover une salle à manger ?",
     image:
-      "https://images.unsplash.com/photo-1565538810643-b5bdb714032a?auto=format&fit=crop&w=900&q=80",
+      "https://cdn.prod.website-files.com/66b5915d0cf82dc2bc8a5f3b/670d98280364f94e4deda57b_renovation-salle-a-manger.webp",
   },
   {
     title: "Comment intégrer la domotique à vos projets de rénovation ?",
     image:
-      "https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=900&q=80",
+      "https://cdn.prod.website-files.com/66b5915d0cf82dc2bc8a5f3b/670d98b30334f3320bd15ae7_renovation-domotique.webp",
   },
   {
     title: "Éclairage : jusqu'à 60% d'économie d'énergie",
     image:
-      "https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?auto=format&fit=crop&w=900&q=80",
+      "https://cdn.prod.website-files.com/66b5915d0cf82dc2bc8a5f3b/670d996acc478abd1d716422_renovation-eclairage.webp",
   },
   {
     title: "Rénovation de chambre : nos conseils",
     image:
-      "https://images.unsplash.com/photo-1540518614846-7eded433c457?auto=format&fit=crop&w=900&q=80",
+      "https://cdn.prod.website-files.com/66b5915d0cf82dc2bc8a5f3b/670d951291d457002c2f1906_renovation-chambre.webp",
   },
   {
     title: "Rénovation complète : guide à l'usage des particuliers",
     image:
-      "https://images.unsplash.com/photo-1581094488379-6b6c1f8c5a5a?auto=format&fit=crop&w=900&q=80",
+      "https://cdn.prod.website-files.com/66b5915d0cf82dc2bc8a5f3b/670d946254eb594420fcc81e_renovation-complete.webp",
   },
   {
     title: "Travaux de rafraîchissement pour redonner vie à votre appartement",
     image:
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=80",
+      "https://cdn.prod.website-files.com/66b5915d0cf82dc2bc8a5f3b/670d9b3fbe44e20a364054ef_travaux-de-rafraichissement.webp",
   },
   {
     title: "Choisir ses matériaux : durabilité et budget",
     image:
-      "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=900&q=80",
+      "https://cdn.prod.website-files.com/66b5915d0cf82dc2bc8a5f3b/66b5b2cacb6220f316a820c1_project-image-9.png",
   },
 ];
 
@@ -73,6 +73,7 @@ export function Blog() {
                   src={p.image}
                   alt={p.title}
                   fill
+                  unoptimized
                   sizes="(max-width: 1024px) 50vw, 25vw"
                   className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
                 />

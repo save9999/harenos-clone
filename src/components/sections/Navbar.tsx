@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Container } from "@/components/ui/Container";
@@ -14,6 +15,9 @@ const NAV = [
   { href: "#faq", label: "FAQ" },
 ];
 
+const LOGO =
+  "https://cdn.prod.website-files.com/66b4c687d49bec445509f339/66b4ef69340625108f0191a4_logo.png";
+
 export function Navbar() {
   const [open, setOpen] = useState(false);
 
@@ -21,12 +25,15 @@ export function Navbar() {
     <header className="sticky top-0 z-50 bg-[var(--color-paper)]/95 backdrop-blur">
       <Container className="flex h-20 items-center justify-between">
         <Link href="/" className="flex items-center gap-2">
-          <span className="grid size-9 place-items-center rounded-full bg-[var(--color-ink)] text-white">
-            <span className="text-base font-bold leading-none">H</span>
-          </span>
-          <span className="text-lg font-bold tracking-tight text-[var(--color-ink)]">
-            Harenos
-          </span>
+          <Image
+            src={LOGO}
+            alt="Harenos"
+            width={140}
+            height={36}
+            unoptimized
+            priority
+            className="h-9 w-auto"
+          />
         </Link>
 
         <nav className="hidden items-center gap-8 lg:flex">

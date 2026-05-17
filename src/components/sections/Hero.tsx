@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { Sparkles } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 
@@ -11,11 +10,14 @@ export function Hero() {
           <div>
             <h1 className="font-display text-[44px] font-bold leading-[1.05] tracking-tight text-[var(--color-ink)] md:text-[68px]">
               Rénover pour le meilleur{" "}
-              <span className="inline-flex size-10 items-center justify-center md:size-14">
-                <Sparkles
-                  className="text-[var(--color-brand)]"
-                  strokeWidth={2.2}
-                  size={48}
+              <span className="inline-block align-middle">
+                <Image
+                  src="https://cdn.prod.website-files.com/66b4c687d49bec445509f339/66b59ba7d08eb11325bd4b16_sparkles-svgrepo-com%20(4)%201.png"
+                  alt=""
+                  width={56}
+                  height={56}
+                  unoptimized
+                  className="inline-block size-10 md:size-14"
                 />
               </span>
             </h1>
@@ -38,10 +40,11 @@ export function Hero() {
           <div className="relative">
             <div className="relative aspect-[4/5] overflow-hidden rounded-[28px]">
               <Image
-                src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80"
+                src="https://cdn.prod.website-files.com/66b4c687d49bec445509f339/66c1a744a9f78e8cf0e9e8ea_Hero%20section%20new%20image.png"
                 alt="Intérieur résidentiel rénové"
                 fill
                 priority
+                unoptimized
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"
               />

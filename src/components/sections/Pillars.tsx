@@ -1,21 +1,21 @@
-import { PencilRuler, Users, FileCheck2 } from "lucide-react";
+import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 
 const PILLARS = [
   {
-    Icon: PencilRuler,
+    icon: "https://cdn.prod.website-files.com/66b4c687d49bec445509f339/66c1d26b0e6c11373fac12ab_Icon%201.svg",
     title: "Conception du projet",
     body:
       "De la première idée au plan technique, nos chefs de projet posent les bases d'un chantier maîtrisé : besoins, contraintes, budget et planning.",
   },
   {
-    Icon: Users,
+    icon: "https://cdn.prod.website-files.com/66b4c687d49bec445509f339/66c1d1b130125423dfef05d6_Icon%202.svg",
     title: "Une équipe d'expert",
     body:
       "Maçons, électriciens, plombiers, menuisiers, carreleurs : tous nos corps d'état sont sélectionnés pour leur savoir-faire et coordonnés par un seul interlocuteur.",
   },
   {
-    Icon: FileCheck2,
+    icon: "https://cdn.prod.website-files.com/66b4c687d49bec445509f339/66c1d1b211d4ef563f0e5bbf_Icon%203.svg",
     title: "Un engagement clair",
     body:
       "Devis détaillé, planning écrit, points d'avancement réguliers. Vous savez ce qui se passe et combien ça coûte, à chaque étape.",
@@ -33,13 +33,19 @@ export function Pillars() {
         </div>
 
         <div className="mt-14 grid gap-6 md:grid-cols-3">
-          {PILLARS.map(({ Icon, title, body }) => (
+          {PILLARS.map(({ icon, title, body }) => (
             <div
               key={title}
               className="flex flex-col gap-5 rounded-[28px] bg-white p-8 ring-1 ring-[var(--color-line)]"
             >
-              <div className="grid size-14 place-items-center rounded-full bg-[var(--color-brand-soft)] text-[var(--color-brand)]">
-                <Icon size={26} strokeWidth={1.8} />
+              <div className="grid size-14 place-items-center rounded-full bg-[var(--color-brand-soft)]">
+                <Image
+                  src={icon}
+                  alt=""
+                  width={28}
+                  height={28}
+                  unoptimized
+                />
               </div>
               <h3 className="text-xl font-bold tracking-tight text-[var(--color-ink)]">
                 {title}

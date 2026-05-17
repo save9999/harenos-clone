@@ -1,5 +1,9 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Container } from "@/components/ui/Container";
+
+const LOGO =
+  "https://cdn.prod.website-files.com/66b4c687d49bec445509f339/66b4ef69340625108f0191a4_logo.png";
 
 const COLS = [
   {
@@ -37,12 +41,14 @@ export function Footer() {
         <div className="grid gap-12 md:grid-cols-[1.2fr_2fr]">
           <div>
             <Link href="/" className="flex items-center gap-2">
-              <span className="grid size-9 place-items-center rounded-full bg-white text-[var(--color-ink)]">
-                <span className="text-base font-bold leading-none">H</span>
-              </span>
-              <span className="text-lg font-bold tracking-tight text-white">
-                Harenos
-              </span>
+              <Image
+                src={LOGO}
+                alt="Harenos"
+                width={140}
+                height={36}
+                unoptimized
+                className="h-9 w-auto brightness-0 invert"
+              />
             </Link>
             <p className="mt-5 max-w-xs text-[15px] leading-relaxed text-white/60">
               Entreprise générale de rénovation tous corps d&apos;état,
