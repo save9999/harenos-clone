@@ -8,11 +8,11 @@ import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 
 const NAV = [
-  { href: "#projets", label: "Nos projets" },
-  { href: "#expertises", label: "Travaux de rénovation" },
-  { href: "#pourquoi", label: "Pourquoi Harenos" },
-  { href: "#process", label: "Comment ça marche" },
-  { href: "#faq", label: "FAQ" },
+  { href: "/#projets", label: "Nos projets" },
+  { href: "/conseils", label: "Nos conseils" },
+  { href: "/#pourquoi", label: "Pourquoi Harenos" },
+  { href: "/#process", label: "Comment ça marche" },
+  { href: "/#faq", label: "FAQ" },
 ];
 
 const LOGO =
@@ -49,7 +49,7 @@ export function Navbar() {
         </nav>
 
         <div className="hidden items-center gap-3 lg:flex">
-          <Button href="#contact">Décrire mon projet</Button>
+          <Button href="/#contact">Décrire mon projet</Button>
         </div>
 
         <button
@@ -76,7 +76,7 @@ export function Navbar() {
               </Link>
             ))}
             <div className="mt-2 px-3">
-              <Button href="#contact" className="w-full">
+              <Button href="/#contact" className="w-full">
                 Décrire mon projet
               </Button>
             </div>

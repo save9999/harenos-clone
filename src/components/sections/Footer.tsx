@@ -9,10 +9,10 @@ const COLS = [
   {
     title: "Entreprise",
     links: [
-      { href: "#pourquoi", label: "Pourquoi Harenos" },
-      { href: "#projets", label: "Nos projets" },
-      { href: "#process", label: "Comment ça marche" },
-      { href: "#expertises", label: "Nos conseils" },
+      { href: "/#pourquoi", label: "Pourquoi Harenos" },
+      { href: "/#projets", label: "Nos projets" },
+      { href: "/#process", label: "Comment ça marche" },
+      { href: "/conseils", label: "Nos conseils" },
     ],
   },
   {
