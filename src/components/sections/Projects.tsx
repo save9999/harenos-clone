@@ -7,37 +7,37 @@ const PROJECTS = [
     name: "Projet Tourel",
     type: "Rénovation complète",
     image:
-      "https://cdn.prod.website-files.com/66b5915d0cf82dc2bc8a5f3b/66b5b1cb6304088c3fdf2e68_project-image-1.png",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80",
   },
   {
     name: "Projet Victoire",
     type: "Rénovation complète",
     image:
-      "https://cdn.prod.website-files.com/66b5915d0cf82dc2bc8a5f3b/66b5b210d31b6ec8537f2063_project-image-2.png",
+      "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=80",
   },
   {
     name: "Projet Estère",
     type: "Cuisine & salle de bain",
     image:
-      "https://cdn.prod.website-files.com/66b5915d0cf82dc2bc8a5f3b/66b5b228b0a1aec2b339b701_project-image-3.png",
+      "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=1200&q=80",
   },
   {
     name: "Projet Saint-Marc",
     type: "Rénovation intérieure",
     image:
-      "https://cdn.prod.website-files.com/66b5915d0cf82dc2bc8a5f3b/66b5b2456541f311e4b2afb5_project-image-4.png",
+      "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=80",
   },
   {
     name: "Projet Marcel",
     type: "Extension & gros œuvre",
     image:
-      "https://cdn.prod.website-files.com/66b5915d0cf82dc2bc8a5f3b/66b5b2cacb6220f316a820c1_project-image-9.png",
+      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80",
   },
   {
     name: "Projet Vincennes",
     type: "Rénovation appartement",
     image:
-      "https://cdn.prod.website-files.com/66b5915d0cf82dc2bc8a5f3b/66b5b2f502f907359d9b01e8_project-image-10.png",
+      "https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1200&q=80",
   },
 ];
 

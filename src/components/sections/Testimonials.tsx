@@ -10,7 +10,7 @@ const REVIEWS = [
       "L'équipe a tenu le planning et le devis à la lettre. Notre chef de projet répondait dans la journée à chacune de nos questions.",
     name: "Marie-Laure D.",
     image:
-      "https://cdn.prod.website-files.com/66b4c687d49bec445509f339/66d6687505276e332e8df7ee_Rectangle%2056.png",
+      "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=900&q=80",
   },
   {
     project: "Projet Victoire",
@@ -19,7 +19,7 @@ const REVIEWS = [
       "Trois chantiers livrés avec Harenos. C'est rare de trouver une entreprise aussi rigoureuse sur le chiffrage et la qualité des finitions.",
     name: "Jean-Patrick L.",
     image:
-      "https://cdn.prod.website-files.com/66b4c687d49bec445509f339/66d668d9e96667b08c500d59_Rectangle%2056.png",
+      "https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?auto=format&fit=crop&w=900&q=80",
   },
   {
     project: "Projet Estère",
@@ -28,7 +28,7 @@ const REVIEWS = [
       "Rénovation de la cuisine et de deux salles de bain réalisée en six semaines, sans surprise. Le résultat est à la hauteur de nos attentes.",
     name: "Stéphanie M.",
     image:
-      "https://cdn.prod.website-files.com/66b4c687d49bec445509f339/66d6696fd25970ab5c731fa7_Rectangle%2056.png",
+      "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=900&q=80",
   },
   {
     project: "Projet Saint-Marc",
@@ -37,7 +37,7 @@ const REVIEWS = [
       "Visite technique sérieuse, devis lisible, ouvriers ponctuels. Tout a été géré du début à la fin par un interlocuteur unique.",
     name: "Frantz J.",
     image:
-      "https://cdn.prod.website-files.com/66b4c687d49bec445509f339/66d669ef42ef5e3425be9073_Rectangle%2056.png",
+      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=900&q=80",
   },
   {
     project: "Projet Marcel",
@@ -46,7 +46,7 @@ const REVIEWS = [
       "Coordination impeccable entre les corps d'état et exécution conforme aux plans. Une vraie tranquillité d'esprit du début à la fin.",
     name: "Carine B.",
     image:
-      "https://cdn.prod.website-files.com/66b4c687d49bec445509f339/6722b40004f57d75950faade_Rectangle%2056.png",
+      "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=80",
   },
 ];
 
