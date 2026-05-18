@@ -10,26 +10,48 @@ export type Block =
 export type Post = {
   slug: string;
   title: string;
+  seoTitle: string;
   image: string;
   excerpt: string;
+  seoDescription: string;
+  keywords: string[];
   category: string;
   readingTime: string;
   publishedAt: string;
+  updatedAt: string;
+  author: string;
   intro: string;
   blocks: Block[];
 };
+
+export const SITE_URL = "https://harenos-clone.vercel.app";
+export const SITE_NAME = "Harenos";
+export const DEFAULT_AUTHOR = "L'équipe Harenos";
 
 export const POSTS: Post[] = [
   {
     slug: "renovation-salon",
     title: "Tout savoir sur la rénovation d'un salon",
+    seoTitle: "Rénovation salon : guide complet, prix et conseils 2026",
     image:
       "https://cdn.prod.website-files.com/66b5915d0cf82dc2bc8a5f3b/670d97c70334f3320bd08dbc_renovation-salon.webp",
     excerpt:
       "Optimiser l'espace, choisir les bons matériaux et créer une atmosphère qui vous ressemble : nos clés pour réussir la rénovation de votre salon.",
+    seoDescription:
+      "Réussir la rénovation de votre salon : usage, circulation, sols, lumière, palette, budget. Le guide d'une entreprise IDF avec prix et conseils pratiques.",
+    keywords: [
+      "rénovation salon",
+      "rénover son salon",
+      "aménagement salon",
+      "travaux salon",
+      "prix rénovation salon",
+      "entreprise rénovation Île-de-France",
+    ],
     category: "Pièces de vie",
     readingTime: "8 min de lecture",
     publishedAt: "2026-04-12",
+    updatedAt: "2026-05-10",
+    author: DEFAULT_AUTHOR,
     intro:
       "Le salon est la pièce la plus vécue de la maison. C'est là qu'on reçoit, qu'on lit, qu'on regarde un film, qu'on travaille parfois. Le rénover, c'est bien plus que repeindre les murs : c'est repenser un espace pour qu'il colle à votre quotidien sur les dix prochaines années. Voici un guide complet pour aborder ces travaux sereinement.",
     blocks: [
@@ -129,13 +151,26 @@ export const POSTS: Post[] = [
   {
     slug: "renover-salle-a-manger",
     title: "Quels sont les avantages de rénover une salle à manger ?",
+    seoTitle: "Rénover sa salle à manger : avantages, idées et budget",
     image:
       "https://cdn.prod.website-files.com/66b5915d0cf82dc2bc8a5f3b/670d98280364f94e4deda57b_renovation-salle-a-manger.webp",
     excerpt:
       "La salle à manger est la pièce sociale par excellence. La rénover transforme votre quotidien et la valeur de votre bien.",
+    seoDescription:
+      "Pourquoi rénover sa salle à manger ? Ouverture sur cuisine, rangements intégrés, éclairage, acoustique, valorisation du bien. Conseils et budgets détaillés.",
+    keywords: [
+      "rénover salle à manger",
+      "rénovation salle à manger",
+      "ouverture cuisine salle à manger",
+      "aménagement salle à manger",
+      "travaux salle à manger",
+      "espace repas",
+    ],
     category: "Pièces de vie",
     readingTime: "7 min de lecture",
     publishedAt: "2026-04-18",
+    updatedAt: "2026-05-12",
+    author: DEFAULT_AUTHOR,
     intro:
       "Trop souvent reléguée au second plan derrière la cuisine et le salon, la salle à manger est pourtant le théâtre de moments essentiels : repas de famille, dîners entre amis, anniversaires, fêtes de fin d'année. La rénover, c'est lui rendre sa place et profiter de bénéfices concrets, tant sur le plan du confort que sur celui de la valeur immobilière.",
     blocks: [
@@ -219,13 +254,27 @@ export const POSTS: Post[] = [
   {
     slug: "domotique-renovation",
     title: "Comment intégrer la domotique à vos projets de rénovation ?",
+    seoTitle: "Domotique en rénovation : guide d'intégration 2026",
     image:
       "https://cdn.prod.website-files.com/66b5915d0cf82dc2bc8a5f3b/670d98b30334f3320bd15ae7_renovation-domotique.webp",
     excerpt:
       "Volets, chauffage, éclairage, sécurité : la maison connectée n'est plus un gadget. Comment l'intégrer intelligemment lors d'une rénovation ?",
+    seoDescription:
+      "Intégrer la domotique à votre rénovation : KNX, Zigbee, Wi-Fi, scénarios, sécurité, vie privée. Comparatif des solutions, usages vraiment utiles et budgets.",
+    keywords: [
+      "domotique rénovation",
+      "maison connectée",
+      "KNX rénovation",
+      "Zigbee maison",
+      "domotique appartement",
+      "smart home France",
+      "automatisation maison",
+    ],
     category: "Technologie",
     readingTime: "9 min de lecture",
     publishedAt: "2026-03-28",
+    updatedAt: "2026-05-05",
+    author: DEFAULT_AUTHOR,
     intro:
       "La domotique a quitté l'univers des early adopters pour devenir un standard de la rénovation moderne. Pilotage de l'éclairage, des volets, du chauffage, de la sécurité, des scénarios… Bien intégrée, elle simplifie réellement le quotidien et réduit la consommation. Mal intégrée, elle devient une couche d'agacement supplémentaire. Voici comment l'aborder.",
     blocks: [
@@ -312,13 +361,27 @@ export const POSTS: Post[] = [
   {
     slug: "eclairage-economie-energie",
     title: "Éclairage : jusqu'à 60% d'économie d'énergie",
+    seoTitle: "Éclairage LED rénovation : -60% sur la facture d'énergie",
     image:
       "https://cdn.prod.website-files.com/66b5915d0cf82dc2bc8a5f3b/670d996acc478abd1d716422_renovation-eclairage.webp",
     excerpt:
       "Repenser l'éclairage d'un logement, c'est diviser sa consommation par deux ou trois sans rien sacrifier au confort. Voici comment.",
+    seoDescription:
+      "Diviser la consommation d'éclairage par 3 sans perdre en confort : LED de qualité, détecteurs, variateurs, lumière naturelle. Méthode et budgets concrets.",
+    keywords: [
+      "éclairage LED",
+      "économie énergie éclairage",
+      "rénovation éclairage",
+      "ampoule LED qualité",
+      "variateur LED",
+      "détecteur présence",
+      "éclairage maison",
+    ],
     category: "Économies d'énergie",
     readingTime: "8 min de lecture",
     publishedAt: "2026-04-02",
+    updatedAt: "2026-05-08",
+    author: DEFAULT_AUTHOR,
     intro:
       "L'éclairage représente entre 10 et 15 % de la consommation électrique d'un logement français. Avec les bons choix techniques et les bons gestes, on divise facilement ce poste par trois — sans perdre en confort, et souvent en gagnant en qualité d'ambiance. La rénovation est le moment idéal pour faire ce travail en profondeur.",
     blocks: [
@@ -408,13 +471,27 @@ export const POSTS: Post[] = [
   {
     slug: "renovation-chambre",
     title: "Rénovation de chambre : nos conseils",
+    seoTitle: "Rénover une chambre : nos conseils pratiques 2026",
     image:
       "https://cdn.prod.website-files.com/66b5915d0cf82dc2bc8a5f3b/670d951291d457002c2f1906_renovation-chambre.webp",
     excerpt:
       "Acoustique, lumière, rangement, qualité de l'air : la chambre est la pièce où le détail fait la différence. Tour d'horizon des bons réflexes.",
+    seoDescription:
+      "Acoustique, lumière, qualité de l'air, rangement : les bons réflexes pour rénover une chambre. Budgets et matériaux recommandés par des professionnels.",
+    keywords: [
+      "rénovation chambre",
+      "rénover sa chambre",
+      "aménagement chambre",
+      "isolation phonique chambre",
+      "dressing intégré chambre",
+      "chambre parentale",
+      "qualité air chambre",
+    ],
     category: "Pièces privées",
     readingTime: "7 min de lecture",
     publishedAt: "2026-03-15",
+    updatedAt: "2026-04-28",
+    author: DEFAULT_AUTHOR,
     intro:
       "On y passe un tiers de notre vie. Pourtant la chambre est souvent rénovée à la va-vite, comme une pièce secondaire. C'est une erreur : la qualité du sommeil dépend très directement de l'aménagement, de l'acoustique, de l'air et de la lumière. Voici les points sur lesquels ne pas se tromper.",
     blocks: [
@@ -494,13 +571,28 @@ export const POSTS: Post[] = [
   {
     slug: "renovation-complete-guide",
     title: "Rénovation complète : guide à l'usage des particuliers",
+    seoTitle: "Rénovation complète : guide étape par étape 2026",
     image:
       "https://cdn.prod.website-files.com/66b5915d0cf82dc2bc8a5f3b/670d946254eb594420fcc81e_renovation-complete.webp",
     excerpt:
       "Du diagnostic à la livraison, le déroulé d'un chantier de rénovation totale, étape par étape, avec ses budgets et ses pièges.",
+    seoDescription:
+      "Étapes, devis, autorisations, planning, budgets, aides MaPrimeRénov : tout ce qu'il faut savoir pour réussir la rénovation totale d'un appartement ou d'une maison.",
+    keywords: [
+      "rénovation complète",
+      "rénovation appartement Paris",
+      "rénovation maison",
+      "budget rénovation",
+      "étapes rénovation",
+      "MaPrimeRénov",
+      "permis construire rénovation",
+      "architecte rénovation",
+    ],
     category: "Méthodologie",
     readingTime: "11 min de lecture",
     publishedAt: "2026-02-20",
+    updatedAt: "2026-05-02",
+    author: DEFAULT_AUTHOR,
     intro:
       "Rénover totalement un logement est l'un des projets les plus engageants qu'un particulier puisse mener. C'est aussi l'un des plus rentables, à condition de bien le structurer. Voici le déroulé complet, étape par étape, des décisions à prendre, des budgets à prévoir et des erreurs à éviter.",
     blocks: [
@@ -613,13 +705,27 @@ export const POSTS: Post[] = [
   {
     slug: "rafraichissement-appartement",
     title: "Travaux de rafraîchissement pour redonner vie à votre appartement",
+    seoTitle: "Rafraîchir un appartement : conseils et budget 2026",
     image:
       "https://cdn.prod.website-files.com/66b5915d0cf82dc2bc8a5f3b/670d9b3fbe44e20a364054ef_travaux-de-rafraichissement.webp",
     excerpt:
       "Sans tout casser, un appartement peut être métamorphosé en deux à trois semaines. Voici les leviers les plus efficaces.",
+    seoDescription:
+      "Métamorphoser un appartement sans gros œuvre : peinture, sols, éclairage, électricité apparente. Les leviers à fort impact et les budgets réels.",
+    keywords: [
+      "rafraîchissement appartement",
+      "petits travaux appartement",
+      "peinture appartement",
+      "rénovation rapide",
+      "remise à neuf appartement",
+      "rénovation légère",
+      "déco appartement",
+    ],
     category: "Petits travaux",
     readingTime: "6 min de lecture",
     publishedAt: "2026-04-30",
+    updatedAt: "2026-05-14",
+    author: DEFAULT_AUTHOR,
     intro:
       "Tout le monde n'a pas le budget ou l'envie d'une rénovation totale. Le rafraîchissement — un chantier court, sans modification structurelle — permet de transformer un appartement avec un budget contenu. La condition : choisir les bons leviers et ne pas se disperser.",
     blocks: [
@@ -689,13 +795,27 @@ export const POSTS: Post[] = [
   {
     slug: "choisir-materiaux",
     title: "Choisir ses matériaux : durabilité et budget",
+    seoTitle: "Choisir ses matériaux de rénovation : durabilité vs budget",
     image:
       "https://cdn.prod.website-files.com/66b5915d0cf82dc2bc8a5f3b/66b5b2cacb6220f316a820c1_project-image-9.png",
     excerpt:
       "Le choix des matériaux représente souvent 40 % du budget d'une rénovation. Comment arbitrer entre coût, durabilité et impact environnemental ?",
+    seoDescription:
+      "Sol, peinture, bois, carrelage, isolation : comment arbitrer entre prix, durabilité et impact environnemental ? Le vrai coût annualisé des matériaux.",
+    keywords: [
+      "matériaux rénovation",
+      "choix matériaux travaux",
+      "matériau durable",
+      "parquet ou stratifié",
+      "FDES matériaux",
+      "matériaux écologiques",
+      "coût annualisé matériaux",
+    ],
     category: "Matériaux",
     readingTime: "8 min de lecture",
     publishedAt: "2026-04-22",
+    updatedAt: "2026-05-09",
+    author: DEFAULT_AUTHOR,
     intro:
       "Un matériau bon marché peut s'avérer ruineux à dix ans, et un matériau cher peut être un excellent placement. Le choix ne se résume jamais au prix au m² affiché en magasin : il intègre la durée de vie, l'entretien, l'impact environnemental et la cohérence avec l'existant. Voici comment arbitrer sans se tromper.",
     blocks: [

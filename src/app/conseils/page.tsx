@@ -6,13 +6,85 @@ import type { Metadata } from "next";
 import { Container } from "@/components/ui/Container";
 import { Navbar } from "@/components/sections/Navbar";
 import { Footer } from "@/components/sections/Footer";
-import { POSTS } from "@/lib/posts";
+import { POSTS, SITE_NAME, SITE_URL } from "@/lib/posts";
+
+const PAGE_URL = `${SITE_URL}/conseils`;
+const PAGE_TITLE = "Nos conseils travaux — Harenos | Guides rénovation IDF";
+const PAGE_DESC =
+  "Guides pratiques, retours d'expérience et conseils d'experts pour réussir vos projets de rénovation en Île-de-France : pièces de vie, domotique, éclairage, matériaux, méthodologie.";
 
 export const metadata: Metadata = {
-  title: "Nos conseils travaux — Harenos",
-  description:
-    "Guides, conseils et bonnes pratiques pour réussir vos projets de rénovation : pièces de vie, domotique, éclairage, matériaux, méthodologie.",
+  title: PAGE_TITLE,
+  description: PAGE_DESC,
+  alternates: { canonical: PAGE_URL },
+  keywords: [
+    "conseils rénovation",
+    "guide rénovation",
+    "blog travaux",
+    "entreprise rénovation Île-de-France",
+    "rénovation Paris",
+    "Harenos blog",
+  ],
+  openGraph: {
+    type: "website",
+    url: PAGE_URL,
+    siteName: SITE_NAME,
+    title: PAGE_TITLE,
+    description: PAGE_DESC,
+    locale: "fr_FR",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: PAGE_TITLE,
+    description: PAGE_DESC,
+  },
 };
+
+function blogJsonLd() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "@id": PAGE_URL,
+    name: "Nos conseils travaux",
+    url: PAGE_URL,
+    description: PAGE_DESC,
+    inLanguage: "fr-FR",
+    publisher: {
+      "@type": "Organization",
+      name: SITE_NAME,
+      url: SITE_URL,
+    },
+    blogPost: POSTS.map((p) => ({
+      "@type": "BlogPosting",
+      headline: p.title,
+      name: p.seoTitle,
+      description: p.seoDescription,
+      image: p.image,
+      url: `${SITE_URL}/conseils/${p.slug}`,
+      datePublished: p.publishedAt,
+      dateModified: p.updatedAt,
+      author: { "@type": "Organization", name: p.author },
+      keywords: p.keywords.join(", "),
+      articleSection: p.category,
+    })),
+  };
+}
+
+function breadcrumbJsonLd() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Accueil", item: SITE_URL },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Nos conseils travaux",
+        item: PAGE_URL,
+      },
+    ],
+  };
+}
 
 function formatDate(iso: string) {
   return new Date(iso).toLocaleDateString("fr-FR", {
@@ -27,6 +99,14 @@ export default function ConseilsIndexPage() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogJsonLd()) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd()) }}
+      />
       <Navbar />
       <main className="pb-24">
         <Container className="pt-10 md:pt-14">

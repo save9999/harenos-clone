@@ -9,7 +9,13 @@ import { Button } from "@/components/ui/Button";
 import { Navbar } from "@/components/sections/Navbar";
 import { Footer } from "@/components/sections/Footer";
 import { ArticleRenderer } from "@/components/article/ArticleRenderer";
-import { POSTS, getPostBySlug } from "@/lib/posts";
+import {
+  POSTS,
+  SITE_NAME,
+  SITE_URL,
+  getPostBySlug,
+  type Post,
+} from "@/lib/posts";
 
 export function generateStaticParams() {
   return POSTS.map((p) => ({ slug: p.slug }));
@@ -22,15 +28,109 @@ export async function generateMetadata({
   const post = getPostBySlug(slug);
   if (!post) return { title: "Article introuvable — Harenos" };
 
+  const url = `${SITE_URL}/conseils/${post.slug}`;
+
   return {
-    title: `${post.title} — Harenos`,
-    description: post.excerpt,
+    title: post.seoTitle,
+    description: post.seoDescription,
+    keywords: post.keywords,
+    authors: [{ name: post.author }],
+    alternates: { canonical: url },
     openGraph: {
-      title: post.title,
-      description: post.excerpt,
-      images: [post.image],
       type: "article",
+      url,
+      siteName: SITE_NAME,
+      title: post.seoTitle,
+      description: post.seoDescription,
+      images: [{ url: post.image, alt: post.title }],
+      locale: "fr_FR",
+      publishedTime: post.publishedAt,
+      modifiedTime: post.updatedAt,
+      authors: [post.author],
+      tags: post.keywords,
     },
+    twitter: {
+      card: "summary_large_image",
+      title: post.seoTitle,
+      description: post.seoDescription,
+      images: [post.image],
+    },
+  };
+}
+
+function articleJsonLd(post: Post) {
+  const url = `${SITE_URL}/conseils/${post.slug}`;
+  const wordCount = post.blocks.reduce((acc, b) => {
+    if (b.type === "p" || b.type === "h2" || b.type === "h3") {
+      return acc + b.text.split(/\s+/).length;
+    }
+    if (b.type === "ul" || b.type === "ol") {
+      return acc + b.items.join(" ").split(/\s+/).length;
+    }
+    if (b.type === "callout") {
+      return acc + (b.title + " " + b.text).split(/\s+/).length;
+    }
+    if (b.type === "quote") {
+      return acc + b.text.split(/\s+/).length;
+    }
+    return acc;
+  }, post.intro.split(/\s+/).length);
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    mainEntityOfPage: { "@type": "WebPage", "@id": url },
+    headline: post.title,
+    name: post.seoTitle,
+    description: post.seoDescription,
+    image: [post.image],
+    author: {
+      "@type": "Organization",
+      name: post.author,
+      url: SITE_URL,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: SITE_NAME,
+      logo: {
+        "@type": "ImageObject",
+        url: "https://cdn.prod.website-files.com/66b4c687d49bec445509f339/66b4ef69340625108f0191a4_logo.png",
+      },
+    },
+    datePublished: post.publishedAt,
+    dateModified: post.updatedAt,
+    inLanguage: "fr-FR",
+    articleSection: post.category,
+    keywords: post.keywords.join(", "),
+    wordCount,
+    url,
+  };
+}
+
+function breadcrumbJsonLd(post: Post) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Accueil",
+        item: SITE_URL,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Nos conseils travaux",
+        item: `${SITE_URL}/conseils`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: post.title,
+        item: `${SITE_URL}/conseils/${post.slug}`,
+      },
+    ],
   };
 }
 
@@ -53,6 +153,18 @@ export default async function ArticlePage({
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(articleJsonLd(post)),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbJsonLd(post)),
+        }}
+      />
       <Navbar />
       <main className="pb-24">
         <article>
