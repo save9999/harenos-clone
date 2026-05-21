@@ -34,11 +34,12 @@ export function ContactForm() {
               />
               <div className="relative">
                 <h2 className="font-display text-[34px] font-bold leading-[1.05] tracking-tight md:text-[44px]">
-                  Décrivez votre projet
+                  Devis gratuit sous 48h
                 </h2>
                 <p className="mt-4 max-w-md text-[15px] leading-relaxed text-white/70">
-                  Un chef de projet vous rappelle sous 24h avec une première
-                  estimation budgétaire et un créneau de visite technique.
+                  Un chef de projet vous rappelle sous 48h avec une première
+                  estimation budgétaire et un créneau de visite technique
+                  gratuite — sans engagement.
                 </p>
 
                 <ul className="mt-10 space-y-4 text-sm text-white/80">
@@ -49,7 +50,7 @@ export function ContactForm() {
                     />
                     <span>
                       <span className="font-semibold text-white">
-                        Réponse sous 24h
+                        Devis gratuit sous 48h
                       </span>
                       <br />
                       <span className="text-white/60">
@@ -131,11 +132,16 @@ export function ContactForm() {
                       options={PROJECT_TYPES}
                     />
                     <Field
-                      label="Ville / département"
-                      name="city"
-                      placeholder="Paris 12, 92, etc."
+                      label="Surface estimée (m²)"
+                      name="surface"
+                      placeholder="Ex : 65 m²"
                     />
                   </div>
+                  <Field
+                    label="Ville / département"
+                    name="city"
+                    placeholder="Paris 12, Vincennes, 92..."
+                  />
                   <Field
                     label="Décrivez votre projet"
                     name="message"
@@ -153,14 +159,15 @@ export function ContactForm() {
                   <button
                     type="submit"
                     disabled={pending}
-                    className="mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-[var(--color-brand)] px-6 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-[var(--color-brand-dark)] disabled:cursor-not-allowed disabled:opacity-70"
+                    className="mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-[var(--color-brand)] px-8 py-4 text-sm font-semibold text-white transition-colors hover:bg-[var(--color-brand-dark)] disabled:cursor-not-allowed disabled:opacity-70"
                   >
-                    {pending ? "Envoi…" : "Envoyer ma demande"}
+                    {pending ? "Envoi…" : "Obtenir mon devis gratuit"}
                     {!pending && <ArrowRight size={16} />}
                   </button>
                   <p className="text-xs text-[var(--color-muted)]">
-                    En envoyant ce formulaire, vous acceptez d&apos;être
-                    recontacté par Harenos.
+                    Devis gratuit · Sans engagement · Réponse sous 48h. En
+                    envoyant ce formulaire vous acceptez d&apos;être recontacté
+                    par Harenos.
                   </p>
                 </form>
               )}

@@ -1,9 +1,10 @@
 import { Container } from "@/components/ui/Container";
 
 const STATS = [
-  { value: "+ 50", label: "Chantiers livrés" },
+  { value: "+ 150", label: "Chantiers livrés en IDF" },
   { value: "97%", label: "Clients satisfaits" },
-  { value: "17", label: "Villes couvertes" },
+  { value: "8", label: "Départements couverts" },
+  { value: "10 ans", label: "Garantie décennale" },
 ];
 
 export function Stats() {
@@ -14,7 +15,7 @@ export function Stats() {
           Harenos c&apos;est...
         </h2>
 
-        <ul className="mt-12 grid gap-6 md:grid-cols-3">
+        <ul className="mt-12 grid gap-6 sm:grid-cols-2 md:grid-cols-4">
           {STATS.map((s) => (
             <li
               key={s.label}

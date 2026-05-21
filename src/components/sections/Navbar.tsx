@@ -9,9 +9,9 @@ import { Button } from "@/components/ui/Button";
 
 const NAV = [
   { href: "/#projets", label: "Nos projets" },
-  { href: "/conseils", label: "Nos conseils" },
   { href: "/#pourquoi", label: "Pourquoi Harenos" },
   { href: "/#process", label: "Comment ça marche" },
+  { href: "/#zones", label: "Zones IDF" },
   { href: "/#faq", label: "FAQ" },
 ];
 

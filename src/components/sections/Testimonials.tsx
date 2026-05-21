@@ -48,6 +48,15 @@ const REVIEWS = [
     image:
       "https://cdn.prod.website-files.com/66b4c687d49bec445509f339/6722b40004f57d75950faade_Rectangle%2056.png",
   },
+  {
+    project: "Projet Vincennes",
+    title: "Devis clair, chantier propre",
+    body:
+      "Harenos a réalisé la rénovation complète de notre appartement Vincennois en huit semaines. Devis respecté à l'euro près, artisans sérieux et ponctuels.",
+    name: "Thomas & Aurélie R.",
+    image:
+      "https://cdn.prod.website-files.com/66b5915d0cf82dc2bc8a5f3b/66b5b2f502f907359d9b01e8_project-image-10.png",
+  },
 ];
 
 export function Testimonials() {

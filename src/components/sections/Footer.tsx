@@ -18,10 +18,11 @@ const COLS = [
   {
     title: "Travaux",
     links: [
-      { href: "#", label: "Rénovation complète" },
-      { href: "#", label: "Cuisine & salle de bain" },
-      { href: "#", label: "Toiture & façade" },
-      { href: "#", label: "Extension & gros œuvre" },
+      { href: "/#contact", label: "Rénovation complète" },
+      { href: "/#contact", label: "Cuisine & salle de bain" },
+      { href: "/#contact", label: "Toiture & façade" },
+      { href: "/#contact", label: "Extension & gros œuvre" },
+      { href: "/#zones", label: "Zones d'intervention" },
     ],
   },
   {
@@ -51,8 +52,9 @@ export function Footer() {
               />
             </Link>
             <p className="mt-5 max-w-xs text-[15px] leading-relaxed text-white/60">
-              Entreprise générale de rénovation tous corps d&apos;état,
-              intervenant partout en Île-de-France.
+              Entreprise générale de rénovation tous corps d&apos;état en
+              Île-de-France. Certifiée RGE, Qualibat — garantie décennale sur
+              tous nos chantiers.
             </p>
             <div className="mt-6 space-y-1 text-sm text-white/80">
               <a href="tel:+33180000000" className="block hover:text-white">

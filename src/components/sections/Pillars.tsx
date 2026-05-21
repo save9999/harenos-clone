@@ -6,19 +6,19 @@ const PILLARS = [
     icon: "https://cdn.prod.website-files.com/66b4c687d49bec445509f339/66c1d26b0e6c11373fac12ab_Icon%201.svg",
     title: "Conception du projet",
     body:
-      "De la première idée au plan technique, nos chefs de projet posent les bases d'un chantier maîtrisé : besoins, contraintes, budget et planning.",
+      "De la première idée au plan technique, nos chefs de projet posent les bases d'un chantier maîtrisé : besoins, contraintes, budget et planning. Devis gratuit, sans engagement.",
   },
   {
     icon: "https://cdn.prod.website-files.com/66b4c687d49bec445509f339/66c1d1b130125423dfef05d6_Icon%202.svg",
-    title: "Une équipe d'expert",
+    title: "Artisans certifiés RGE",
     body:
-      "Maçons, électriciens, plombiers, menuisiers, carreleurs : tous nos corps d'état sont sélectionnés pour leur savoir-faire et coordonnés par un seul interlocuteur.",
+      "Maçons, électriciens, plombiers, menuisiers, carreleurs : tous qualifiés Qualibat et RGE, coordonnés par un seul interlocuteur pour votre tranquillité.",
   },
   {
     icon: "https://cdn.prod.website-files.com/66b4c687d49bec445509f339/66c1d1b211d4ef563f0e5bbf_Icon%203.svg",
-    title: "Un engagement clair",
+    title: "Garantie décennale",
     body:
-      "Devis détaillé, planning écrit, points d'avancement réguliers. Vous savez ce qui se passe et combien ça coûte, à chaque étape.",
+      "Devis détaillé poste par poste, planning écrit, points d'avancement réguliers. Et garantie décennale sur l'ensemble de nos réalisations.",
   },
 ];
 

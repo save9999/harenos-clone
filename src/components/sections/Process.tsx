@@ -5,25 +5,25 @@ const STEPS = [
     n: "1",
     title: "Prise de contact",
     body:
-      "Nous échangeons sur votre projet pour comprendre vos besoins et vos contraintes. Vous recevez une première estimation sous 24h.",
+      "Décrivez votre projet en ligne ou par téléphone. Un chef de projet vous rappelle sous 48h pour un premier échange sans engagement.",
   },
   {
     n: "2",
-    title: "Visite technique",
+    title: "Visite technique offerte",
     body:
-      "Un chef de projet se déplace, vérifie la faisabilité technique, prend les mesures et écoute vos priorités sur place.",
+      "Un chef de projet se déplace gratuitement sur place, vérifie la faisabilité, prend les mesures et écoute vos priorités.",
   },
   {
     n: "3",
-    title: "Devis détaillé",
+    title: "Devis gratuit sous 48h",
     body:
-      "Vous recevez un devis transparent, poste par poste. Une fois validé, la signature lance officiellement votre chantier.",
+      "Vous recevez un devis transparent et détaillé poste par poste, sans frais. Une fois signé, votre chantier est planifié.",
   },
   {
     n: "4",
-    title: "Démarrage des travaux",
+    title: "Travaux & livraison",
     body:
-      "Votre chantier est piloté par votre chef de projet, avec un suivi rigoureux et des points d'avancement réguliers.",
+      "Votre chantier est piloté par votre chef de projet, avec points d'avancement réguliers. Livraison garantie, décennale incluse.",
   },
 ];
 
