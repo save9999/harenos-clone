@@ -32,25 +32,37 @@ const ITEMS = [
   },
 ];
 
-function Item({ q, a }: { q: string; a: string }) {
+function Item({ q, a, index }: { q: string; a: string; index: number }) {
   const [open, setOpen] = useState(false);
+  const panelId = `faq-panel-${index}`;
+  const buttonId = `faq-btn-${index}`;
   return (
     <div className="border-b border-[var(--color-line)] last:border-b-0">
       <button
+        id={buttonId}
         type="button"
         onClick={() => setOpen((v) => !v)}
-        className="flex w-full items-center justify-between gap-6 py-6 text-left"
+        className="flex w-full items-center justify-between gap-6 py-6 text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-brand)]"
         aria-expanded={open}
+        aria-controls={panelId}
       >
         <span className="text-[16px] font-semibold tracking-tight text-[var(--color-ink)]">
           {q}
         </span>
-        <span className="grid size-9 shrink-0 place-items-center rounded-full bg-[var(--color-brand-soft)] text-[var(--color-brand)]">
+        <span
+          aria-hidden="true"
+          className="grid size-9 shrink-0 place-items-center rounded-full bg-[var(--color-brand-soft)] text-[var(--color-brand)]"
+        >
           {open ? <Minus size={16} /> : <Plus size={16} />}
         </span>
       </button>
       {open && (
-        <p className="pb-6 pr-12 text-[15px] leading-relaxed text-[var(--color-ink-soft)]">
+        <p
+          id={panelId}
+          role="region"
+          aria-labelledby={buttonId}
+          className="pb-6 pr-12 text-[15px] leading-relaxed text-[var(--color-ink-soft)]"
+        >
           {a}
         </p>
       )}
@@ -87,8 +99,8 @@ export function Faq() {
           </div>
 
           <div className="rounded-[28px] bg-white px-6 ring-1 ring-[var(--color-line)] md:px-8">
-            {ITEMS.map((item) => (
-              <Item key={item.q} q={item.q} a={item.a} />
+            {ITEMS.map((item, i) => (
+              <Item key={item.q} q={item.q} a={item.a} index={i} />
             ))}
           </div>
         </div>

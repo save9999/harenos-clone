@@ -36,7 +36,10 @@ export function TrustBar() {
         <ul className="flex flex-wrap items-center justify-center gap-x-10 gap-y-6 md:justify-between">
           {ITEMS.map(({ icon: Icon, label, sub }) => (
             <li key={label} className="flex items-center gap-3">
-              <span className="grid size-10 shrink-0 place-items-center rounded-full bg-[var(--color-brand-soft)] text-[var(--color-brand)]">
+              <span
+                aria-hidden="true"
+                className="grid size-10 shrink-0 place-items-center rounded-full bg-[var(--color-brand-soft)] text-[var(--color-brand)]"
+              >
                 <Icon size={18} />
               </span>
               <div>
